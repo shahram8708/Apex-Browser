@@ -1,7 +1,3 @@
-Certainly! Here's a professional README template for your PyQt5-based browser application that you can use to publish on GitHub:
-
----
-
 # Apex Browser
 
 Apex Browser is a feature-rich web browser built using Python and PyQt5, offering a seamless browsing experience with support for tabs, bookmarks, history, and more.
