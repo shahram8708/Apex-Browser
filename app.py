@@ -77,6 +77,22 @@ class SimpleBrowser(QMainWindow):
 
         self.url_bar = QLineEdit()
         self.url_bar.returnPressed.connect(self.navigate_to_url)
+
+        self.url_bar.setStyleSheet('''
+            QLineEdit {
+                padding: 5px;
+                border: 2px solid #ccc;
+                border-radius: 5px;
+                min-width: 200px;
+                font-size: 14px;
+            }
+            QLineEdit:focus {
+                border-color: #4CAF50; 
+            }
+        ''')
+
+        self.url_bar.mousePressEvent = lambda event: self.url_bar.selectAll()
+
         nav_bar.addWidget(self.url_bar)
 
         stop_btn = QAction(QIcon('icons/stop.png'), 'Stop', self)
